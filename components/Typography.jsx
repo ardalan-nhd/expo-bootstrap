@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme, variant) => ({
         fontSize: theme.typography[variant]?.fontSize ?? theme.typography.default.fontSize,
         fontStyle: theme.typography[variant]?.fontStyle ?? theme.typography.default.fontStyle,
         fontWeight: theme.typography[variant]?.fontWeight ?? theme.typography.default.fontWeight,
-        fontVariant: theme.typography[variant]?.fontVariant ?? theme.typography.default.fontVariant
+        fontVariant: theme.typography[variant]?.fontVariant ?? theme.typography.default.fontVariant,
+        letterSpacing: theme.typography[variant]?.letterSpacing ?? theme.typography.default.letterSpacing,
+        lineHeight: theme.typography[variant]?.lineHeight ?? theme.typography.default.lineHeight
     }
 }))
