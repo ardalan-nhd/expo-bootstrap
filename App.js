@@ -1,21 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'
+import { ThemeProvider } from 'react-native-elements'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import React, { useState } from 'react';
+import { ProfileContext } from './context'
 
 export default function App() {
+  const [profile, setProfile] = useState({
+    isAuth: false
+  })
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <ProfileContext.Provider value={{ ...profile, setProfile }}>
+        <ThemeProvider>
+        </ThemeProvider>
+      </ProfileContext.Provider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
